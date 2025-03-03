@@ -9,7 +9,7 @@ mongoose.connect(URI)
 
 const connection = mongoose.connection
 
-connection.once("open", () => {
+connection.once("open", () => {     
     console.log("Db is connected");
 })
 
