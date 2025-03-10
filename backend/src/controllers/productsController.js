@@ -22,10 +22,12 @@ productsController.deleteProduct = async (req, res) => {
 }
 
 productsController.putProduct = async (req, res) => {
-    const {name, description, price, stock} = req.boddy
+    const {name, description, price, stock} = req.body
 
     const putProduct = await productsModel.findByIdAndUpdate(
         req.params.id, {name, description, price, stock}, {new: true}
     )
     res.json({message: "product updated"})
 }
+
+export default productsController
