@@ -1,7 +1,11 @@
 import mongoose from "mongoose"
 
+
 //Guardo la direccion de mi base de datos
-const URI = "mongodb://localhost:27017/cocacolaDB"
+//const URI = "mongodb+srv://luisesc1210:aevYl8ppuIxj0MRW@lui.xme8g.mongodb.net/"
+
+const URI = "mongodb+srv://luisesc1210:aevYl8ppuIxj0MRW@lui.xme8g.mongodb.net/cocacolaDB?retryWrites=true&w=majority&appName=Lui";
+
 
 //Conectar con la base de datos
 
