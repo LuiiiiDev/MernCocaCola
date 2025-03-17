@@ -1,15 +1,13 @@
 import mongoose from "mongoose"
 
-
+import { config } from "./src/config.js";
 //Guardo la direccion de mi base de datos
+
 //const URI = "mongodb+srv://luisesc1210:aevYl8ppuIxj0MRW@lui.xme8g.mongodb.net/"
-
-const URI = "mongodb+srv://luisesc1210:aevYl8ppuIxj0MRW@lui.xme8g.mongodb.net/cocacolaDB?retryWrites=true&w=majority&appName=Lui";
-
 
 //Conectar con la base de datos
 
-mongoose.connect(URI) 
+mongoose.connect(config.db.URI) 
 
 const connection = mongoose.connection
 
