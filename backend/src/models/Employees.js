@@ -48,7 +48,7 @@ const employeesSchema = new Schema({
     password: {
         type: String,
         require: true,
-        maxLength: 8,
+        maxLength: 100,
     },
     telephone: {
         type: String,

@@ -35,7 +35,7 @@ loginController.login = async (req, res) => {
             const isMatch = bcryptjs.compare(password, userFound.password)
 
             if(!isMatch){
-                return res.json({message: "Invalid password"})
+                return res.json({message: "Invalid password" + error})
             }
         }
 
@@ -53,6 +53,7 @@ loginController.login = async (req, res) => {
             (error, token) => {
                 if (error) console.log(error);
                 res.cookie("authToken", token)
+                res.json({message: "login successful"})
             }
         )
     }
