@@ -36,7 +36,6 @@ const clientsSchema = new Schema({
     password: {
         type: String,
         require: true,
-        maxLength: 8,
     },
     telephone: {
         type: String,
